@@ -1,0 +1,19 @@
+def setMatrixZeroes(a):
+    row=set()
+    col=set()
+    m=len(a)
+    n=len(a[0])
+    for i in range(0,m):
+        for j in range(0,n):
+            if a[i][j]==0:
+                row.add(i)
+                col.add(j)
+
+    for i in m:
+        for j in range(0,n):
+            a[i][j]=0
+    for i in n:
+        for j in range(0,m):
+            a[i][j]=0
+
+    return a
